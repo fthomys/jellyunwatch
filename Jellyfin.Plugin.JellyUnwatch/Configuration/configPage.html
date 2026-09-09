@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JellyUnwatch</title>
+</head>
+<body>
+<div id="JellyUnwatchConfigPage" data-role="page" class="page type-interior pluginConfigurationPage"
+     data-controller="__plugin/jellyunwatch.js">
+    <div data-role="content">
+        <div class="content-primary">
+            <form id="JellyUnwatchConfigForm">
+                <div class="verticalSection">
+                    <h2 class="sectionTitle">JellyUnwatch</h2>
+                    <p id="JellyUnwatchStatus" class="fieldDescription"></p>
+                </div>
+
+                <div class="checkboxContainer checkboxContainer-withDescription">
+                    <label class="emby-checkbox-label">
+                        <input is="emby-checkbox" type="checkbox" id="EnableWebButton"/>
+                        <span>Show the remove button in the web client</span>
+                    </label>
+                    <div class="fieldDescription checkboxFieldDescription">
+                        Requires the File Transformation plugin, version 3.0.0.0 or newer.
+                    </div>
+                </div>
+
+                <div class="checkboxContainer checkboxContainer-withDescription">
+                    <label class="emby-checkbox-label">
+                        <input is="emby-checkbox" type="checkbox" id="HideSeriesFromNextUp"/>
+                        <span>Also hide the series from Next Up</span>
+                    </label>
+                    <div class="fieldDescription checkboxFieldDescription">
+                        Suppresses the whole show in Next Up until something from it is played again.
+                    </div>
+                </div>
+
+                <div class="checkboxContainer checkboxContainer-withDescription">
+                    <label class="emby-checkbox-label">
+                        <input is="emby-checkbox" type="checkbox" id="ClearResumePositionOnHide"/>
+                        <span>Clear the resume position when hiding</span>
+                    </label>
+                    <div class="fieldDescription checkboxFieldDescription">
+                        Off by default, so hidden items keep the exact playback position.
+                    </div>
+                </div>
+
+                <div class="checkboxContainer checkboxContainer-withDescription">
+                    <label class="emby-checkbox-label">
+                        <input is="emby-checkbox" type="checkbox" id="AllowResetPlaybackProgress"/>
+                        <span>Allow user to reset playback progress</span>
+                    </label>
+                    <div class="fieldDescription checkboxFieldDescription">
+                        Shows a checkbox in the confirmation dialog so the user can decide per item whether the
+                        playback position is reset as well.
+                    </div>
+                </div>
+
+                <div class="checkboxContainer checkboxContainer-withDescription">
+                    <label class="emby-checkbox-label">
+                        <input is="emby-checkbox" type="checkbox" id="AutoUnhideOnPlayback"/>
+                        <span>Restore an item when it is played again</span>
+                    </label>
+                </div>
+
+                <div class="checkboxContainer checkboxContainer-withDescription">
+                    <label class="emby-checkbox-label">
+                        <input is="emby-checkbox" type="checkbox" id="ConfirmBeforeHiding"/>
+                        <span>Ask for confirmation before hiding</span>
+                    </label>
+                </div>
+
+                <div>
+                    <button is="emby-button" type="submit" class="raised button-submit block">
+                        <span>Save</span>
+                    </button>
+                </div>
+            </form>
+
+            <div class="verticalSection">
+                <h2 class="sectionTitle">Hidden items</h2>
+                <div id="JellyUnwatchHiddenItems"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
