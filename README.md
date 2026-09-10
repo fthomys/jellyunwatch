@@ -188,5 +188,8 @@ The script injection runs through [file-transformation](https://github.com/IAmPa
 <br/>Hiding entries instead of resetting their progress is the idea behind [jellyfin-plugin-discontinue-watching](https://github.com/jon4hz/jellyfin-plugin-discontinue-watching) by [jon4hz](https://github.com/jon4hz).
 <br/>The layout of this readme follows [InPlayerEpisodePreview](https://github.com/Namo2/InPlayerEpisodePreview) by [Namo2](https://github.com/Namo2).
 
+## License
+MIT, see [LICENSE](LICENSE).
+
 ## Disclaimer
 Parts of this project were written with the help of AI.
