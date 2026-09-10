@@ -15,6 +15,4 @@ public class PluginConfiguration : BasePluginConfiguration
     public bool ConfirmBeforeHiding { get; set; } = true;
 
     public bool AllowResetPlaybackProgress { get; set; } = true;
-
-    public int AutoHideAfterDays { get; set; }
 }

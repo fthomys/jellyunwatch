@@ -113,6 +113,23 @@ Other clients can drive the plugin over HTTP with a regular user token.
 
 Administrator accounts also get `GET /JellyUnwatch/Users`, `DELETE /JellyUnwatch/Users/{userId}/Items/{itemId}` and `DELETE /JellyUnwatch/Users/{userId}/Items`.
 
+### Stored data
+The settings above apply to the whole server, the hidden lists belong to each user. Both live in the Jellyfin config directory, `/config` in most containers:
+
+| Path | Contents |
+|---|---|
+| `plugins/Jellyfin.Plugin.JellyUnwatch/hidden-items.json` | Hidden entries per user, with item id, series id, name and timestamp |
+| `plugins/configurations/Jellyfin.Plugin.JellyUnwatch.xml` | The settings from the configuration page |
+
+Removing the plugin leaves both files behind, so an entry hidden today is still hidden after a reinstall. To get the rows back before uninstalling, restore the entries on the configuration page, or delete `hidden-items.json` while the server is stopped.
+
+## Known limitations
+* Only the resume and next up endpoints are filtered, `/UserItems/Resume`, `/Users/{userId}/Items/Resume` and `/Shows/NextUp`. A client that builds its own list from other endpoints keeps showing everything.
+* The follow up check in the browser compares item ids. After hiding a whole show, the other episodes of it disappear once the server answers again, not while the client is still drawing from its cache.
+* The button needs the card overlay of the desktop layout. On the TV layout Jellyfin renders no hover menu, so it falls back to a floating button, which is untested there.
+* Without file-transformation there is no button at all. The API and the filtering are unaffected.
+* Removing the plugin does not put anything back on its own, see the section above.
+
 ## Troubleshooting
 
 ### 1. The remove button isn't visible
