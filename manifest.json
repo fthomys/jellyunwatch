@@ -9,6 +9,14 @@
         "imageUrl": "",
         "versions": [
             {
+                "version": "1.0.0.2",
+                "changelog": "",
+                "targetAbi": "12.0.0.0",
+                "sourceUrl": "https://github.com/fthomys/jellyunwatch/releases/download/v1.0.0.2/jelly-unwatch_1.0.0.2.zip",
+                "checksum": "d69dfa0f104b70b14b4d24d36a3d2d0d",
+                "timestamp": "2026-09-10T13:43:07Z"
+            },
+            {
                 "version": "1.0.0.0",
                 "changelog": "",
                 "targetAbi": "12.0.0.0",
